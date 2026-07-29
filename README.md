@@ -37,7 +37,7 @@ The `lab.sh` script is just a simple wrapper. It will run the commands you type,
 
 ---
 
-# Grep Notes
+## Grep Notes
 
 ## intro
 
