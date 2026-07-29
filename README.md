@@ -1,8 +1,8 @@
 # grep-lab
 
-Interactive practice lab for learning grep
+This repo is intended to be an interactive way to learn and practice grep.
 
-Recommended to read or a list skim the [grep man page](docs/man-grep.txt) before interacting with this repo. The notes and references in this repo are pulled directly from these.
+I *recommended* to read or at least skim the [grep man page](docs/man-grep.txt) first.
 
 I've found man pages to be more brief and useful for reference, but can often appear terse for unfamilar concepts. Info pages are also extremely useful, but are much more detailed and comprehensive, often going in to much greater detail than the one might need.
 
