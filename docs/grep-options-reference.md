@@ -1,5 +1,3 @@
-# GNU `grep` Options Reference
-
 ## Generic Program Information
 
 | Option / variants / arguments | Description | Simple example |
