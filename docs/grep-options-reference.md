@@ -86,29 +86,3 @@ Choose one pattern syntax mode. It applies to all `-e` and `-f` patterns.
 | `--line-buffered` | Flush output one line at a time; useful in live pipelines. | `tail -f app.log \| grep --line-buffered 'error'` |
 | `-U`, `--binary` | Read files verbatim as binary. Mainly relevant on Windows. | `grep -U 'pattern' file.txt` |
 | `-z`, `--null-data` | Treat NUL bytes rather than newlines as record separators. | `printf 'one\0two\0' \| grep -z 'two'` |
-
-#### Common Combinations
-
-Extended regex pattern for "error" or "warning" from `file.txt`, case-insensitive, and including line numbers in output.
-
-```bash
-grep -Ein 'error|warning' file.txt
-```
-
-Recursive search through Python files, excluding `.git`.
-
-```bash
-grep -rIn --include='*.py' --exclude-dir='.git' 'TODO' .
-```
-
-Read literal-string patterns from `patterns.txt`.
-
-```bash
-grep -F -f patterns.txt file.txt
-```
-
-Use multiple extended-regex patterns.
-
-```bash
-grep -E -e 'error|warning' -e '^failed:' file.txt
-```
