@@ -8,9 +8,9 @@ Highly suggested to read through these, or at least just the man page to familar
 
 ---
 
-## overview
+## OVERVIEW
 
-`grep` searches for **pattern(s)** from **standard input**, **file(s)**, or **directories recursively**.
+`grep` searches for **pattern(s)** in **file(s)**
 
 ***COMMAND STRUCTURE***
 
