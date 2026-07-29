@@ -20,8 +20,7 @@ grep [OPTION...] -e PATTERN ... [FILE...]
 grep [OPTION...] PATTERN_FILE ... [FILE...]
 ```
 
-
-
+---
 
 ## OPTIONS
 
@@ -114,6 +113,7 @@ Choose one pattern syntax mode. It applies to all `-e` and `-f` patterns.
 | `-U`, `--binary` | Read files verbatim as binary. Mainly relevant on Windows. | `grep -U 'pattern' file.txt` |
 | `-z`, `--null-data` | Treat NUL bytes rather than newlines as record separators. | `printf 'one\0two\0' \| grep -z 'two'` |
 
+---
 
 ## REGULAR EXPRESSIONS
 
