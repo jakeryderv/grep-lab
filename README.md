@@ -17,8 +17,13 @@ Highly suggested to read through these, or at least just the man page to familar
 ```bash
 grep [OPTION...] PATTERN [FILE...]
 grep [OPTION...] -e PATTERN ... [FILE...]
-grep [OPTION...] PATTERN_FILE ... [FILE...]
+grep [OPTION...] -f PATTERN_FILE ... [FILE...]
 ```
+
+```bash
+grep 'error' file.txt
+```
+
 
 ---
 
