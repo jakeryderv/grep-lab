@@ -1,11 +1,11 @@
-## Generic Program Information
+#### Generic Program Information
 
 | Option / variants / arguments | Description | Simple example |
 |---|---|---|
 | `--help` | Show usage help and exit. | `grep --help` |
 | `-V`, `--version` | Show installed `grep` version. | `grep --version` |
 
-## Pattern Syntax
+#### Pattern Syntax
 
 Choose one pattern syntax mode. It applies to all `-e` and `-f` patterns.
 
@@ -16,7 +16,7 @@ Choose one pattern syntax mode. It applies to all `-e` and `-f` patterns.
 | `-G`, `--basic-regexp` | Use basic regular expressions. This is the default. | `grep -G 'error\|warning' file.txt` |
 | `-P`, `--perl-regexp` | Use Perl-compatible regular expressions. | `grep -P '\d{3}-\d{4}' file.txt` |
 
-## Matching Control
+#### Matching Control
 
 | Option / variants / arguments | Description | Simple example |
 |---|---|---|
@@ -28,7 +28,7 @@ Choose one pattern syntax mode. It applies to all `-e` and `-f` patterns.
 | `-w`, `--word-regexp` | Match only complete words. | `grep -w 'cat' file.txt` |
 | `-x`, `--line-regexp` | Match only when the entire line matches. | `grep -x 'enabled' file.txt` |
 
-## General Output Control
+#### General Output Control
 
 | Option / variants / arguments | Description | Simple example |
 |---|---|---|
@@ -41,7 +41,7 @@ Choose one pattern syntax mode. It applies to all `-e` and `-f` patterns.
 | `-q`, `--quiet`, `--silent` | Print nothing; use the exit status to test for a match. | `grep -q 'ready' file.txt && echo found` |
 | `-s`, `--no-messages` | Suppress unreadable or missing-file errors. | `grep -s 'error' missing.txt` |
 
-## Output Line Prefix Control
+#### Output Line Prefix Control
 
 | Option / variants / arguments | Description | Simple example |
 |---|---|---|
@@ -53,7 +53,7 @@ Choose one pattern syntax mode. It applies to all `-e` and `-f` patterns.
 | `-T`, `--initial-tab` | Align prefixed output using tab stops. | `grep -nT 'error' file.txt` |
 | `-Z`, `--null` | End output filenames with NUL instead of newline. | `grep -lZ 'error' * \| xargs -0 printf '%s\n'` |
 
-## Context Line Control
+#### Context Line Control
 
 | Option / variants / arguments | Description | Simple example |
 |---|---|---|
@@ -63,7 +63,7 @@ Choose one pattern syntax mode. It applies to all `-e` and `-f` patterns.
 | `--group-separator=SEP` | Set the separator between context groups. | `grep -C 2 --group-separator='====' 'error' logfile` |
 | `--no-group-separator` | Do not print separators between context groups. | `grep -C 2 --no-group-separator 'error' logfile` |
 
-## File and Directory Selection
+#### File and Directory Selection
 
 | Option / variants / arguments | Description | Simple example |
 |---|---|---|
@@ -79,7 +79,7 @@ Choose one pattern syntax mode. It applies to all `-e` and `-f` patterns.
 | `-r`, `--recursive` | Search directories recursively; only follow command-line symlinks. | `grep -r 'TODO' src/` |
 | `-R`, `--dereference-recursive` | Search recursively and follow all symbolic links. | `grep -R 'TODO' src/` |
 
-## Other Options
+#### Other Options
 
 | Option / variants / arguments | Description | Simple example |
 |---|---|---|
@@ -87,30 +87,28 @@ Choose one pattern syntax mode. It applies to all `-e` and `-f` patterns.
 | `-U`, `--binary` | Read files verbatim as binary. Mainly relevant on Windows. | `grep -U 'pattern' file.txt` |
 | `-z`, `--null-data` | Treat NUL bytes rather than newlines as record separators. | `printf 'one\0two\0' \| grep -z 'two'` |
 
-## Common Combinations
+#### Common Combinations
+
+Extended regex pattern for "error" or "warning" from `file.txt`, case-insensitive, and including line numbers in output.
 
 ```bash
 grep -Ein 'error|warning' file.txt
 ```
 
-- `-E`: extended regex
-- `-i`: ignore case
-- `-n`: line numbers
+Recursive search through Python files, excluding `.git`.
 
 ```bash
 grep -rIn --include='*.py' --exclude-dir='.git' 'TODO' .
 ```
 
-Recursive search through Python files, excluding `.git`.
+Read literal-string patterns from `patterns.txt`.
 
 ```bash
 grep -F -f patterns.txt file.txt
 ```
 
-Read literal-string patterns from `patterns.txt`.
+Use multiple extended-regex patterns.
 
 ```bash
 grep -E -e 'error|warning' -e '^failed:' file.txt
 ```
-
-Use multiple extended-regex patterns.
