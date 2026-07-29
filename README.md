@@ -8,9 +8,38 @@ I have found `man` pages to be a great concise reference for commands, but they 
 
 This repo is intended to present the core material from `man` and `info` pages in a more intuitive way, and have the examples/games to practice and nail down the concepts.
 
+*read yourself*
+```bash
+man grep
+info grep
+```
+
 ---
 
-## OVERVIEW
+## usage
+
+#### get started
+
+[Read the grep notes](#grep-notes)
+
+#### run the lab
+
+clone the repo, `cd` into it, then run run the `lab.sh` script
+
+```bash
+git clone https://github.com/jakeryderv/grep-lab.git
+cd grep-lab
+chmod +x lab.sh
+./lab.sh
+```
+
+The `lab.sh` script is just a simple wrapper. It will run the commands you type, and compare your grep commands output to the intended output per exercise and try to guide you along the way with simple and intuitive error messages.
+
+---
+
+# Grep Notes
+
+## intro
 
 `grep` searches for **pattern(s)** in **file(s)**
 
