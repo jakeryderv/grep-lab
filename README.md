@@ -1,8 +1,10 @@
 # grep-lab
 
-interactive practice lab for learning grep
+Interactive practice lab for learning grep
 
-run `man grep` or `info grep` for more details.
+Recommended to read or a list skim the [grep man page](docs/man-grep.txt) before interacting with this repo. The notes and references in this repo are pulled directly from these.
+
+I've found man pages to be more brief and useful for reference, but can often appear terse for unfamilar concepts. Info pages are also extremely useful, but are much more detailed and comprehensive, often going in to much greater detail than the one might need.
 
 Highly suggested to read through these, or at least just the man page to familarize yourself with everything. the following notes reference these man/info pages, but intended to present the everything in a more concise, readable, and approachable way.
 
@@ -27,7 +29,7 @@ grep 'error' file.txt
 
 ---
 
-![grep-options](docs/grep-options-cheatsheet.md)
+[grep-options](docs/grep-options-cheatsheet.md)
 
 ---
 
