@@ -1,4 +1,4 @@
-# grep-lab
+# Grep Lab
 
 Interactive way to learn and practice grep
 
@@ -16,11 +16,11 @@ info grep
 
 ---
 
-## usage
+## Usage
 
 #### get started
 
-[Read the grep notes](#grep-notes)
+[Read the grep notes](#grep-notes). It explains the main things you need to know, and includes links for reference sheets like [options](docs/grep-options-cheatsheet).
 
 #### run the lab
 
@@ -39,43 +39,44 @@ The `lab.sh` script is just a simple wrapper. It will run the commands you type,
 
 ## Grep Notes
 
-## intro
+<u>**TLDR;**</u> Control `grep` with `OPTION(S)` to find `PATTERN(S)` from `FILE(S)` or `stdin`, using regex or strings.
 
-`grep` searches for **pattern(s)** in **file(s)**
+#### overview
 
-***COMMAND STRUCTURE***
+A `grep` command is composed of 3 parts: **options**, **patterns**, and **files**. However, the only required part is **patterns**
 
 ```bash
+# [ ] = optional
+# ... = preceeding can be repeated
 grep [OPTION...] PATTERN [FILE...]
 grep [OPTION...] -e PATTERN ... [FILE...]
 grep [OPTION...] -f PATTERN_FILE ... [FILE...]
 ```
 
-```bash
-grep 'error' file.txt
+***main default options:***
+
+- `-G, --basic-regexp`
+- `--no-ignore-case`
+- `-m -1, --max-count=-1` -> treated as infinity
+- `-H, --with-filename` -> default when more than 1 file to search
+- `-h, --no-filename` -> default when only 1 file or only stdin to search
+
+*for full list of options, see [options cheatsheet](docs/grep-options-cheatsheet)*
+
+There are 4 ***Pattern Syntax*** options that you use to set the syntax for patterns:
+
+```
+-E, --extended-regexp
+-F, --fixed-strings
+-G, --basic-regexp
+-P, --perl-regexp
 ```
 
+`grep` default is basic regex, which contrasts from extended regex mostly in the characters behavior. Basic rule of thumb -> if you want more true regex, or if you know regex, you'll likely want to use `-E`. Just note these **pattern syntax** commands apply to all the patterns in a grep command.
 
----
+Patterns should be quoted when typing them in your shell, as the characters could potentially be intercepted by your shell. I also recommend using single quotes for this very same reason.
 
-[grep-options](docs/grep-options-cheatsheet.md)
-
----
-
-## REGULAR EXPRESSIONS
+`-e` sets one typed pattern to search. `-f` interprets every line from a file as an independent pattern to search. You can repeat or use any combination of the two, just must preceed with `-e` or `-f` respectively, only reason `-e` is absent from fist command structure above is because it is the default so you can ommit if you want to just type one pattern.
 
 
 
-## EXIT STATUS
-
-
-
-## ENVIRONMENT
-
-
-
-## SEE ALSO
-
-awk, cmp, diff, find, perl, sed, sort, xargs, read, pcre2, pcre2syntax, pcre2pattern, terminfo, glob, regex
-
----

@@ -1,0 +1,45 @@
+error
+Error
+warning
+critical error
+error123
+error-123
+error.error
+error+warning
+error|warning
+(error)
+[error]
+^error$
+file.txt
+file1.txt
+file12.txt
+cat
+cats
+concatenate
+color
+colour
+gray
+grey
+abc
+abbc
+abbbc
+ac
+a+c
+a*c
+a?c
+a.c
+123
+123-4567
+555-123-4567
+[user@example.com](mailto:user@example.com)
+[admin@test.org](mailto:admin@test.org)
+/path/to/file
+hello world
+hello    world
+start of line
+line ends here
+TODO: fix this
+FIXME: broken
+INFO: service started
+WARN: disk almost full
+ERROR: connection failed
